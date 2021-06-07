@@ -41,18 +41,28 @@ export default function Home() {
                             <TableHead>
                                 <TableRow>
                                     <TableCell>#</TableCell>
+                                    <TableCell>Icon</TableCell>
                                     <TableCell>Coin</TableCell>
                                     <TableCell>Price</TableCell>
                                     <TableCell>Market cap</TableCell>
+                                    <TableCell>1h</TableCell>
+                                    <TableCell>24h</TableCell>
+                                    <TableCell>7d</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 {data.map((row) => (
                                     <TableRow key={row.id}>
                                         <TableCell>{row.cmc_rank}</TableCell>
+                                        <TableCell> <img
+                                            src={"https://s2.coinmarketcap.com/static/img/coins/64x64/" + row.id + ".png"}
+                                            alt="icon"/></TableCell>
                                         <TableCell align="left">{row.name}</TableCell>
                                         <TableCell>${row.quote.USD.price}</TableCell>
                                         <TableCell>${row.quote.USD.market_cap}</TableCell>
+                                        <TableCell>{row.quote.USD.percent_change_1h}</TableCell>
+                                        <TableCell>{row.quote.USD.percent_change_24h}</TableCell>
+                                        <TableCell>{row.quote.USD.percent_change_7d}</TableCell>
                                     </TableRow>
                                 ))}
                             </TableBody>
