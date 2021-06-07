@@ -6,6 +6,7 @@ import Portfolio from './components/Portfolio';
 import Watchlist from './components/Watchlist';
 import Header from "./components/elements/Header";
 import TopMenu from "./components/elements/TopMenu";
+import CoinDetail from "./components/CoinDetail";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route exact path="/" component={Home}/>
                 <Route path="/portfolio" component={Portfolio}/>
                 <Route path="/watchlist" component={Watchlist}/>
+                <Route path="/coins/:id" component={CoinDetail}/>
             </div>
         </Router>
     );
