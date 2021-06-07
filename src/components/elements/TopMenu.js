@@ -1,6 +1,5 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {makeStyles} from "@material-ui/core";
-import {Link} from "react-router-dom";
 import {MenuData} from "./MenuData";
 
 export default function TopMenu() {
@@ -9,30 +8,35 @@ export default function TopMenu() {
         top_menu: {
             top: "50px",
             position: "fixed",
-            height: "40px",
+            height: "auto",
             backgroundColor: "#7285e8",
+            color:"white",
             left: 0,
             right: 0,
             padding: 0,
-            margin: 0
+            margin: 0,
+            zIndex: 1
         },
         nav_menu: {
+            height:"auto",
             display: "flex",
             flexWrap: "nowrap",
             listStyle: "none",
             marginLeft: 0,
-            marginRight: 0
+            marginRight: 0,
         },
         list_item: {
             display: "block",
             position: "relative",
             listStyle: "none",
             alignItems: "center",
+            color: "white",
         },
         list_a: {
             textDecoration: "none",
             display: "inline-flex",
             padding: "10px 20px",
+            color: "white",
         }
     });
 
