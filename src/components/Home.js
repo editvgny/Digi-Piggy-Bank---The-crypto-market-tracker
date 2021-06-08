@@ -16,7 +16,6 @@ export default function Home() {
                 position: "absolute",
                 left: "10%",
                 right: "10%"
-
             },
             table: {
                 minWidth: 650,
