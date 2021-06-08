@@ -29,6 +29,26 @@ export default function CoinDetail() {
                 right: "10%"
 
             },
+            detail_header: {
+                display: "-webkit-box",
+                paddingTop: "8px",
+                paddingRight: "24px",
+                paddingBottom: "8px",
+                boxSizing: "border-box",
+            },
+            detail_body: {
+                paddingRight: "24px",
+                boxSizing: "border-box",
+                margin: 0,
+
+            },
+            image: {
+                width: "32px",
+                height: "32px"
+            },
+            description: {
+                textAlign: "justify"
+            },
         }
     )
 
@@ -41,12 +61,18 @@ export default function CoinDetail() {
             </React.Fragment>
         )
     } else {
-        console.log(data)
         return (
             <React.Fragment>
                 <div className={classes.content}>
-                    {id}
-                    {data[`${id}`].description}
+                    <div className={classes.detail_header}>
+                        <img src={"https://s2.coinmarketcap.com/static/img/coins/64x64/" + id + ".png"} alt="icon"
+                             className={classes.image}/>
+                        <h1>{data[`${id}`].name}</h1>
+                        <span>{data[`${id}`].symbol}</span>
+                    </div>
+                    <div className={classes.detail_body}>
+                        <div className={classes.description}>{data[`${id}`].description}</div>
+                    </div>
                 </div>
             </React.Fragment>
         )
