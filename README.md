@@ -1,3 +1,13 @@
+# Run the webpage
+
+To run this webpage first you need to type: "npm install" to the terminal in the project directory and second type: "npm start".
+The project will run on "http://localhost:3000/".
+
+System requirements:
+    package.json contains all dependencies what has to be installed before run it. 
+
+The newest stable version always available on origin/develop branch
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
