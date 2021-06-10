@@ -6,7 +6,7 @@ export default function TopMenu() {
 
     const useStyles = makeStyles({
         top_menu: {
-            top: "50px",
+            top: "60px",
             position: "fixed",
             height: "auto",
             backgroundColor: "#7285e8",

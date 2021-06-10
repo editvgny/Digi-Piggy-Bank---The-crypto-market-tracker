@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             display: 'block',
         },
+        fontSize: "40px",
+    },
+    subtitle: {
+      fontSize: "28px"
     },
     search: {
         position: 'relative',
@@ -74,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             display: 'flex',
         },
+        justifyItems: "flex-end"
     },
     sectionMobile: {
         display: 'flex',
@@ -169,16 +174,9 @@ export default function PrimarySearchAppBar() {
         <div className={classes.grow}>
             <AppBar position="static">
                 <Toolbar>
-                    {/*<IconButton*/}
-                    {/*    edge="start"*/}
-                    {/*    className={classes.menuButton}*/}
-                    {/*    color="inherit"*/}
-                    {/*    aria-label="open drawer"*/}
-                    {/*>*/}
-                    {/*    <MenuIcon />*/}
-                    {/*</IconButton>*/}
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Digi Piggy Bank
+                        <img src={"./pb.png"} alt={"piggy"} height={"45px"} width={"45px"}/>
+                        <span>Digi Piggy Bank </span> <span className={classes.subtitle}> - The crypto market tracker</span>
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
